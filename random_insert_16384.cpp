@@ -35,7 +35,7 @@ int main() {
     std::unordered_set<int> unordered_set_reserved;
     std::unordered_set<int> unordered_set;
     btree::btree_set<int> btree_set;
-    unordered_set_reserved.reserve(n);
+    unordered_set_reserved.reserve(std::min(16384, n));
     std::cout << n << '\t' << RandomInsertTest(std::move(btree_set), n).count()
               << '\t'
               << RandomInsertTest(std::move(unordered_set_reserved), n).count()
