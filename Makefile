@@ -1,4 +1,4 @@
-CXXFLAGS = -O3 -std=c++11
+CXXFLAGS = -O3 -std=c++11 -DNDEBUG
 
 .PHONY: all clean
 
@@ -17,13 +17,13 @@ random_insert_16384: random_insert_16384.cpp
 random_insert: random_insert.cpp
 
 sequential_insert.log: sequential_insert
-	sequential_insert | tee "$@"
+	./sequential_insert > "$@"
 
 random_insert_16384.log: random_insert_16384
-	random_insert_16384 | tee "$@"
+	./random_insert_16384 > "$@"
 
 random_insert.log: random_insert
-	random_insert | tee "$@"
+	./random_insert > "$@"
 
 %.png: %.log
 	gnuplot $(basename $@).plot

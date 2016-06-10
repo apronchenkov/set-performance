@@ -27,7 +27,7 @@ Duration SequentialInsertTest(IntegerSet set, int n, int k = 32) {
 }
 
 int main() {
-  for (int n = 256; n <= 1024 * 1024; n += n) {
+  for (int n = 64; n <= 1024 * 1024; n += n) {
     std::set<int> set;
     std::unordered_set<int> unordered_set_reserved;
     std::unordered_set<int> unordered_set;
