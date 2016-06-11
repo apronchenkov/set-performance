@@ -1,6 +1,6 @@
 # SetPerformance
 
-Comparison of performance for different implementations for set in C++
+Performance comparison of different implementations of set in C++
 
 ## Insertion of sequential integers
 ![Insertion time of sequential integers](https://github.com/apronchenkov/set-performance/blob/master/sequential_insert.png)
